@@ -37,7 +37,7 @@ class XmlRpcServer extends Server
         if (
             !isset($_SERVER['CONTENT_TYPE']) || !$this->checkContentType($_SERVER['CONTENT_TYPE'])
         ) {
-            throw new ServerException('XML-RPC server accepts XML requests only. > ' . $_SERVER['CONTENT_TYPE'], -32606);
+            throw new ServerException('XML-RPC server accepts XML requests only.', -32606);
         }
 
         parent::serve($data);
